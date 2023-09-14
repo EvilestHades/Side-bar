@@ -1,0 +1,112 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    font-family: "Poppins", sans-serif ;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: url(wallpaperflare.com_wallpaper.jpg) center no-repeat ;
+    background-size: cover;
+}
+.left-side-bar{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 100vh;
+    width: 280px;
+    border-right: 1px solid rgb(211, 211, 211, 0.7);
+    left: -280px;
+    transition: all 0.3s linear;
+}
+.top-section{
+    position: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    position: relative;
+}
+.top-section a{
+    font-weight: 500;
+    position: relative;
+}
+.bottom-section{
+    height: 75%;
+    width: 100%;
+    margin-top: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+li{
+    list-style-type: none;
+    padding-left: 10px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgb(211, 211, 211, 0);
+}
+.icons{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.icons a{
+    padding: 7px;
+    color: rgb(255, 255, 255, 0.5);
+}
+.icons a:hover{
+    color: rgb(255, 255, 255, 1);
+    transition: color 0.2s;
+}
+
+.bottom-section ul li:hover{
+    padding-left: 12px;
+    border: 1px solid rgb(211, 211, 211, 0.5);
+}
+
+
+.btn-one{
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 20px;
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-two{
+    color: black;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: 400;
+    right: 20px;
+    cursor: pointer;
+}
+#check{
+    display: none;
+    cursor: pointer;
+}
+#check:checked ~ .left-side-bar{
+    left: 0px;
+    transition: all 0.3s linear;
+}
+#check:checked ~ .btn-one {
+    display: none;
+}
